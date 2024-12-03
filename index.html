@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment Setter Demo</title>
+  <style>
+    /* General Styling */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #ffffff; /* White background */
+      color: #333;
+      text-align: center;
+    }
+
+    /* Header Section */
+    header {
+      padding: 20px;
+      background-color: #397DFF; /* Blue header */
+      color: white; /* White text */
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    header h2 {
+      margin: 5px 0 0;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    /* Main Content Section */
+    main {
+      padding: 50px 20px;
+    }
+
+    .instructions {
+      font-size: 1.2em;
+      margin-bottom: 20px;
+      font-weight: bold; /* Make the body text bold */
+    }
+
+    .demo-note {
+      font-size: 1.2em;
+      color: #333; /* Default text color */
+      margin-bottom: 30px;
+      font-weight: bold; /* Make the body text bold */
+    }
+
+    /* Arrow Styling */
+    .arrow {
+      font-size: 8em; /* 4x original size */
+      font-weight: bold;
+      color: black; /* Black arrow */
+      position: fixed;
+      bottom: 24px; /* Center the arrow vertically at the same height as the widget */
+      right: calc(30px + 4em); /* Align the arrow's center horizontally with the widget */
+      z-index: 1000;
+    }
+
+    /* Footer Section */
+    footer {
+      padding: 10px;
+      background-color: #000000; /* Black footer */
+      color: white; /* White text */
+      font-size: 0.9em;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Chatbot Positioning */
+    #chatbot-container {
+      position: fixed;
+      bottom: 24px; /* Align widget's vertical center with the arrow */
+      right: 30px; /* 30px from the right */
+      z-index: 1000;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>Appointment Setter Demo</h1>
+    <h2>Click the Widget in Bottom Right Corner</h2>
+  </header>
+
+  <!-- Main Content Section -->
+  <main>
+    <!-- Instructions and Demo Note -->
+    <p class="instructions">Try out the scheduling, rescheduling, cancellation, and customer service functions.</p>
+    <p class="demo-note">This is a limited demo version. We will specifically customize yours to fit your business's specifics.</p>
+  </main>
+
+  <!-- Arrow -->
+  <div class="arrow">⬇</div>
+
+  <!-- Chatbot Container -->
+  <div id="chatbot-container"></div>
+
+  <!-- Footer Section -->
+  <footer>
+    © 2024 WillDun AI
+  </footer>
+
+  <!-- Voiceflow Chatbot Embed -->
+  <script type="text/javascript">
+    (function(d, t) {
+        var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+        v.onload = function() {
+          window.voiceflow.chat.load({
+            verify: { projectID: '674e04f2f72311c2894484a3' },
+            url: 'https://general-runtime.voiceflow.com',
+            versionID: 'production'
+          });
+        }
+        v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; 
+        v.type = "text/javascript"; 
+        s.parentNode.insertBefore(v, s);
+    })(document, 'script');
+  </script>
+</body>
+</html>
